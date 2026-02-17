@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import SecuritySettings from "./SecuritySettings";
 
 // Types
 type Tab = "profile" | "preferences" | "security";
@@ -313,11 +314,7 @@ export default function SettingsPage() {
                             )}
 
                             {activeTab === "security" && (
-                                <div className="text-center py-20">
-                                    <Shield className="w-16 h-16 text-stone-200 mx-auto mb-4" />
-                                    <h3 className="text-lg font-medium text-stone-400">Security Settings</h3>
-                                    <p className="text-stone-300 text-sm">Coming soon.</p>
-                                </div>
+                                <SecuritySettings />
                             )}
                         </motion.div>
                     </AnimatePresence>
