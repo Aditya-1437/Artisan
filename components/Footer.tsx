@@ -1,7 +1,13 @@
+"use client";
+
+import React, { useState } from "react";
 import Link from "next/link";
-import { Github, Twitter, Linkedin } from "lucide-react";
+import { Github, Twitter, Linkedin, MessageSquare } from "lucide-react";
+import FeedbackModal from "./FeedbackModal";
 
 export default function Footer() {
+    const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
+
     return (
         <footer className="bg-white border-t border-border pt-16 pb-8">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,9 +42,8 @@ export default function Footer() {
                         <h3 className="font-semibold text-foreground mb-4">Product</h3>
                         <ul className="space-y-3 text-sm text-foreground/60">
                             <li><Link href="#" className="hover:text-primary transition-colors">Templates</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Examples</Link></li>
+                            <li><Link href="/updates" className="hover:text-primary transition-colors">Updates</Link></li>
                             <li><Link href="#" className="hover:text-primary transition-colors">Pricing</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Updates</Link></li>
                         </ul>
                     </div>
 
@@ -58,6 +63,14 @@ export default function Footer() {
                             <li><Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
                             <li><Link href="#" className="hover:text-primary transition-colors">Terms of Service</Link></li>
                             <li><Link href="#" className="hover:text-primary transition-colors">Cookie Policy</Link></li>
+                            <li>
+                                <button
+                                    onClick={() => setIsFeedbackOpen(true)}
+                                    className="text-foreground/60 hover:text-primary transition-colors flex items-center gap-2"
+                                >
+                                    Feedback <MessageSquare size={14} />
+                                </button>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -67,6 +80,8 @@ export default function Footer() {
                     <p className="mt-2 md:mt-0">Designed with intent.</p>
                 </div>
             </div>
+
+            <FeedbackModal isOpen={isFeedbackOpen} onClose={() => setIsFeedbackOpen(false)} />
         </footer>
     );
 }

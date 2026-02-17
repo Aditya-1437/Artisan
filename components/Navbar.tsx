@@ -49,10 +49,10 @@ export default function Navbar() {
                             Templates
                         </Link>
                         <Link
-                            href="#"
+                            href="/updates"
                             className="text-foreground/80 hover:text-primary transition-colors font-medium"
                         >
-                            Examples
+                            Updates
                         </Link>
                         <Link
                             href="/pricing"
@@ -83,38 +83,40 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Menu */}
-            {isOpen && (
-                <div className="md:hidden bg-background/95 backdrop-blur-lg border-b border-secondary/20 animate-fade-in absolute w-full">
-                    <div className="px-4 pt-2 pb-6 space-y-2 shadow-lg">
-                        <Link
-                            href="/templates"
-                            className="block px-3 py-3 text-base font-medium text-foreground hover:bg-secondary/10 rounded-lg"
-                        >
-                            Templates
-                        </Link>
-                        <Link
-                            href="#"
-                            className="block px-3 py-3 text-base font-medium text-foreground hover:bg-secondary/10 rounded-lg"
-                        >
-                            Examples
-                        </Link>
-                        <Link
-                            href="/pricing"
-                            className="block px-3 py-3 text-base font-medium text-foreground hover:bg-secondary/10 rounded-lg"
-                        >
-                            Pricing
-                        </Link>
-                        <div className="pt-4 flex flex-col gap-3">
+            {
+                isOpen && (
+                    <div className="md:hidden bg-background/95 backdrop-blur-lg border-b border-secondary/20 animate-fade-in absolute w-full">
+                        <div className="px-4 pt-2 pb-6 space-y-2 shadow-lg">
                             <Link
-                                href="/login"
-                                className="w-full text-center px-4 py-3 bg-primary text-white rounded-xl font-medium shadow-md hover:bg-primary-hover transition-colors"
+                                href="/templates"
+                                className="block px-3 py-3 text-base font-medium text-foreground hover:bg-secondary/10 rounded-lg"
                             >
-                                Login
+                                Templates
                             </Link>
+                            <Link
+                                href="/updates"
+                                className="block px-3 py-3 text-base font-medium text-foreground hover:bg-secondary/10 rounded-lg"
+                            >
+                                Updates
+                            </Link>
+                            <Link
+                                href="/pricing"
+                                className="block px-3 py-3 text-base font-medium text-foreground hover:bg-secondary/10 rounded-lg"
+                            >
+                                Pricing
+                            </Link>
+                            <div className="pt-4 flex flex-col gap-3">
+                                <Link
+                                    href="/login"
+                                    className="w-full text-center px-4 py-3 bg-primary text-white rounded-xl font-medium shadow-md hover:bg-primary-hover transition-colors"
+                                >
+                                    Login
+                                </Link>
+                            </div>
                         </div>
                     </div>
-                </div>
-            )}
-        </nav>
+                )
+            }
+        </nav >
     );
 }
