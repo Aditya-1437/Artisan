@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 const plans = [
     {
-        name: "bASIC",
+        name: "BASIC",
         description: "The Starter",
         price: { monthly: 0, yearly: 0 },
         features: ["1 Resume Template", "Basic Formatting", "PDF Download", "7-Day History"],
