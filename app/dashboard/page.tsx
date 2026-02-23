@@ -54,10 +54,10 @@ export default function DashboardPage() {
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                                <button className="flex items-center justify-center gap-2 bg-[#D06A4C] text-white px-8 py-3.5 rounded-xl font-bold shadow-lg shadow-[#D06A4C]/20 hover:bg-[#b55a3f] transition-all hover:scale-105">
+                                <Link href="/resume-builder" className="flex items-center justify-center gap-2 bg-[#D06A4C] text-white px-8 py-3.5 rounded-xl font-bold shadow-lg shadow-[#D06A4C]/20 hover:bg-[#b55a3f] transition-all hover:scale-105">
                                     <FileText size={18} />
                                     Start from Scratch
-                                </button>
+                                </Link>
                                 <Link
                                     href="/dashboard/templates"
                                     className="flex items-center justify-center gap-2 bg-transparent text-[#2C2C2C] border-2 border-[#2C2C2C]/10 px-8 py-3.5 rounded-xl font-bold hover:bg-[#2C2C2C] hover:text-white transition-all hover:border-[#2C2C2C]"
