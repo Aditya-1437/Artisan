@@ -50,10 +50,10 @@ export default function Footer() {
                     <div>
                         <h3 className="font-semibold text-foreground mb-4">Resources</h3>
                         <ul className="space-y-3 text-sm text-foreground/60">
-                            <li><Link href="#" className="hover:text-primary transition-colors">Resume Guide</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Career Blog</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Interview Prep</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Help Center</Link></li>
+                            <li><Link href="/guide" className="hover:text-primary transition-colors">Resume Guide</Link></li>
+                            <li><Link href="/blog" className="hover:text-primary transition-colors">Career Blog</Link></li>
+                            <li><Link href="/interview-prep" className="hover:text-primary transition-colors">Interview Prep</Link></li>
+                            <li><Link href="/help" className="hover:text-primary transition-colors">Help Center</Link></li>
                         </ul>
                     </div>
 
@@ -63,14 +63,7 @@ export default function Footer() {
                             <li><Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
                             <li><Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link></li>
                             <li><Link href="/cookies" className="hover:text-primary transition-colors">Cookie Policy</Link></li>
-                            <li>
-                                <button
-                                    onClick={() => setIsFeedbackOpen(true)}
-                                    className="text-foreground/60 hover:text-primary transition-colors flex items-center gap-2"
-                                >
-                                    Feedback <MessageSquare size={14} />
-                                </button>
-                            </li>
+                            <li><Link href="/contact" className="hover:text-primary transition-colors">Contact Support</Link></li>
                         </ul>
                     </div>
                 </div>
